@@ -98,6 +98,35 @@
       opacity: 0.85;
     }
 
+    .lang-toggle {
+      display: flex;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .lang-btn {
+      padding: 0.4rem 0.8rem;
+      background: transparent;
+      border: none;
+      color: var(--text-secondary);
+      font-size: 0.8rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-family: inherit;
+    }
+
+    .lang-btn.active {
+      background: var(--primary);
+      color: white;
+    }
+
+    .lang-btn:hover:not(.active) {
+      color: var(--text-primary);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
     /* Hero Section */
     .hero {
       min-height: 100vh;
@@ -521,32 +550,36 @@
   <nav>
     <div class="logo">MATEO AI STUDIO</div>
     <ul class="nav-links">
-      <li><a href="#services">서비스</a></li>
-      <li><a href="#process">프로세스</a></li>
-      <li><a href="#portfolio">포트폴리오</a></li>
-      <li><a href="#contact">문의</a></li>
+      <li><a href="#services" data-ko="서비스" data-en="Services">서비스</a></li>
+      <li><a href="#process" data-ko="프로세스" data-en="Process">프로세스</a></li>
+      <li><a href="#portfolio" data-ko="포트폴리오" data-en="Portfolio">포트폴리오</a></li>
+      <li><a href="#contact" data-ko="문의" data-en="Contact">문의</a></li>
     </ul>
     <div style="display: flex; align-items: center; gap: 1rem;">
+      <div class="lang-toggle">
+        <button class="lang-btn active" onclick="setLang('ko')">KR</button>
+        <button class="lang-btn" onclick="setLang('en')">EN</button>
+      </div>
       <a href="https://www.instagram.com/mateoaistudio/" target="_blank" style="color: var(--text-secondary); text-decoration: none; font-size: 1.2rem; transition: color 0.3s;" onmouseover="this.style.color='var(--primary-light)'" onmouseout="this.style.color='var(--text-secondary)'"><i class="fa-brands fa-instagram"></i></a>
       <a href="https://www.youtube.com/@mateoaistudio" target="_blank" style="color: var(--text-secondary); text-decoration: none; font-size: 1.2rem; transition: color 0.3s;" onmouseover="this.style.color='var(--primary-light)'" onmouseout="this.style.color='var(--text-secondary)'"><i class="fa-brands fa-youtube"></i></a>
-      <a href="#contact" class="nav-cta">프로젝트 문의</a>
+      <a href="#contact" class="nav-cta" data-ko="프로젝트 문의" data-en="Get in Touch">프로젝트 문의</a>
     </div>
   </nav>
 
   <!-- Hero -->
   <section class="hero">
-    <div class="hero-badge">AI 영상 제작 전문</div>
+    <div class="hero-badge" data-ko="AI 영상 제작 전문" data-en="AI Video Production Experts">AI 영상 제작 전문</div>
     <h1>
-      AI로 만드는<br>
-      <span class="gradient-text">차원이 다른 영상</span>
+      <span data-ko="AI로 만드는" data-en="Creating Videos">AI로 만드는</span><br>
+      <span class="gradient-text" data-ko="차원이 다른 영상" data-en="Beyond Imagination with AI">차원이 다른 영상</span>
     </h1>
-    <p>
+    <p data-ko="마테오 AI 스튜디오는 최신 AI 기술을 활용하여<br>기획부터 완성까지, 빠르고 임팩트 있는 영상을 제작합니다." data-en="Mateo AI Studio leverages cutting-edge AI technology<br>to produce fast, impactful videos from concept to completion.">
       마테오 AI 스튜디오는 최신 AI 기술을 활용하여<br>
       기획부터 완성까지, 빠르고 임팩트 있는 영상을 제작합니다.
     </p>
     <div class="hero-buttons">
-      <a href="#contact" class="btn-primary">프로젝트 시작하기</a>
-      <a href="#portfolio" class="btn-secondary">포트폴리오 보기</a>
+      <a href="#contact" class="btn-primary" data-ko="프로젝트 시작하기" data-en="Start a Project">프로젝트 시작하기</a>
+      <a href="#portfolio" class="btn-secondary" data-ko="포트폴리오 보기" data-en="View Portfolio">포트폴리오 보기</a>
     </div>
   </section>
 
@@ -554,39 +587,39 @@
   <section id="services">
     <div class="section-header">
       <p class="section-label">Services</p>
-      <h2 class="section-title">AI 영상 제작의 모든 것</h2>
-      <p class="section-desc">전통적인 제작 방식의 한계를 넘어, AI 기술로 더 빠르고 창의적인 결과물을 만듭니다.</p>
+      <h2 class="section-title" data-ko="AI 영상 제작의 모든 것" data-en="Everything in AI Video Production">AI 영상 제작의 모든 것</h2>
+      <p class="section-desc" data-ko="전통적인 제작 방식의 한계를 넘어, AI 기술로 더 빠르고 창의적인 결과물을 만듭니다." data-en="Going beyond traditional production limits, we deliver faster and more creative results with AI.">전통적인 제작 방식의 한계를 넘어, AI 기술로 더 빠르고 창의적인 결과물을 만듭니다.</p>
     </div>
     <div class="services-grid">
       <div class="service-card">
         <div class="service-icon">🎬</div>
-        <h3>AI 광고 영상</h3>
-        <p>브랜드의 메시지를 AI 기술로 강렬하게 전달하는 광고 영상을 제작합니다. 빠른 제작과 다양한 버전 테스트가 가능합니다.</p>
+        <h3 data-ko="AI 광고 영상" data-en="AI Commercial Videos">AI 광고 영상</h3>
+        <p data-ko="브랜드의 메시지를 AI 기술로 강렬하게 전달하는 광고 영상을 제작합니다. 빠른 제작과 다양한 버전 테스트가 가능합니다." data-en="We create compelling ad videos that powerfully convey your brand message using AI. Fast production and A/B version testing available.">브랜드의 메시지를 AI 기술로 강렬하게 전달하는 광고 영상을 제작합니다. 빠른 제작과 다양한 버전 테스트가 가능합니다.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">🏢</div>
-        <h3>기업 홍보영상</h3>
-        <p>AI 기반 모션그래픽과 영상 생성으로 기업의 비전과 가치를 효과적으로 전달하는 홍보 영상을 제작합니다.</p>
+        <h3 data-ko="기업 홍보영상" data-en="Corporate Videos">기업 홍보영상</h3>
+        <p data-ko="AI 기반 모션그래픽과 영상 생성으로 기업의 비전과 가치를 효과적으로 전달하는 홍보 영상을 제작합니다." data-en="We produce promotional videos that effectively communicate your company's vision and values using AI-powered motion graphics.">AI 기반 모션그래픽과 영상 생성으로 기업의 비전과 가치를 효과적으로 전달하는 홍보 영상을 제작합니다.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">🎵</div>
-        <h3>뮤직비디오 & 숏폼</h3>
-        <p>AI 영상 생성 기술을 활용하여 독창적인 비주얼의 뮤직비디오와 SNS용 숏폼 콘텐츠를 제작합니다.</p>
+        <h3 data-ko="뮤직비디오 & 숏폼" data-en="Music Videos & Short-form">뮤직비디오 & 숏폼</h3>
+        <p data-ko="AI 영상 생성 기술을 활용하여 독창적인 비주얼의 뮤직비디오와 SNS용 숏폼 콘텐츠를 제작합니다." data-en="We create unique music videos and short-form content for social media using AI video generation technology.">AI 영상 생성 기술을 활용하여 독창적인 비주얼의 뮤직비디오와 SNS용 숏폼 콘텐츠를 제작합니다.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">✨</div>
-        <h3>AI VFX & 후반작업</h3>
-        <p>실사 영상에 AI 기반 VFX를 적용하여 고퀄리티 시각효과를 합리적인 비용으로 구현합니다.</p>
+        <h3 data-ko="AI VFX & 후반작업" data-en="AI VFX & Post-production">AI VFX & 후반작업</h3>
+        <p data-ko="실사 영상에 AI 기반 VFX를 적용하여 고퀄리티 시각효과를 합리적인 비용으로 구현합니다." data-en="We apply AI-based VFX to live-action footage, delivering high-quality visual effects at a reasonable cost.">실사 영상에 AI 기반 VFX를 적용하여 고퀄리티 시각효과를 합리적인 비용으로 구현합니다.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">📱</div>
-        <h3>소셜미디어 콘텐츠</h3>
-        <p>인스타그램, 유튜브, 틱톡 등 플랫폼에 최적화된 AI 기반 영상 콘텐츠를 빠르게 제작합니다.</p>
+        <h3 data-ko="소셜미디어 콘텐츠" data-en="Social Media Content">소셜미디어 콘텐츠</h3>
+        <p data-ko="인스타그램, 유튜브, 틱톡 등 플랫폼에 최적화된 AI 기반 영상 콘텐츠를 빠르게 제작합니다." data-en="We rapidly produce AI-powered video content optimized for Instagram, YouTube, TikTok and more.">인스타그램, 유튜브, 틱톡 등 플랫폼에 최적화된 AI 기반 영상 콘텐츠를 빠르게 제작합니다.</p>
       </div>
       <div class="service-card">
         <div class="service-icon">🧠</div>
-        <h3>AI 컨설팅</h3>
-        <p>영상 제작 파이프라인에 AI를 도입하고 싶은 기업을 위한 맞춤형 컨설팅과 워크플로우를 설계합니다.</p>
+        <h3 data-ko="AI 컨설팅" data-en="AI Consulting">AI 컨설팅</h3>
+        <p data-ko="영상 제작 파이프라인에 AI를 도입하고 싶은 기업을 위한 맞춤형 컨설팅과 워크플로우를 설계합니다." data-en="We provide tailored consulting and workflow design for companies looking to integrate AI into their video production pipeline.">영상 제작 파이프라인에 AI를 도입하고 싶은 기업을 위한 맞춤형 컨설팅과 워크플로우를 설계합니다.</p>
       </div>
     </div>
   </section>
@@ -595,29 +628,29 @@
   <section id="process">
     <div class="section-header">
       <p class="section-label">Process</p>
-      <h2 class="section-title">제작 프로세스</h2>
-      <p class="section-desc">체계적인 4단계 프로세스로 효율적이고 완성도 높은 결과물을 만들어냅니다.</p>
+      <h2 class="section-title" data-ko="제작 프로세스" data-en="Our Process">제작 프로세스</h2>
+      <p class="section-desc" data-ko="체계적인 4단계 프로세스로 효율적이고 완성도 높은 결과물을 만들어냅니다." data-en="Our systematic 4-step process ensures efficient, high-quality results every time.">체계적인 4단계 프로세스로 효율적이고 완성도 높은 결과물을 만들어냅니다.</p>
     </div>
     <div class="process-grid">
       <div class="process-step">
         <div class="process-number">01</div>
-        <h3>기획 & 컨셉</h3>
-        <p>클라이언트의 목표를 분석하고 AI 활용 전략을 포함한 기획안을 수립합니다.</p>
+        <h3 data-ko="기획 & 컨셉" data-en="Planning & Concept">기획 & 컨셉</h3>
+        <p data-ko="클라이언트의 목표를 분석하고 AI 활용 전략을 포함한 기획안을 수립합니다." data-en="We analyze your goals and develop a plan including AI strategy.">클라이언트의 목표를 분석하고 AI 활용 전략을 포함한 기획안을 수립합니다.</p>
       </div>
       <div class="process-step">
         <div class="process-number">02</div>
-        <h3>AI 프로토타입</h3>
-        <p>AI 도구로 빠르게 시안을 생성하여 방향성을 확인하고 피드백을 반영합니다.</p>
+        <h3 data-ko="AI 프로토타입" data-en="AI Prototype">AI 프로토타입</h3>
+        <p data-ko="AI 도구로 빠르게 시안을 생성하여 방향성을 확인하고 피드백을 반영합니다." data-en="We quickly generate drafts with AI tools, confirm direction, and incorporate feedback.">AI 도구로 빠르게 시안을 생성하여 방향성을 확인하고 피드백을 반영합니다.</p>
       </div>
       <div class="process-step">
         <div class="process-number">03</div>
-        <h3>제작 & 편집</h3>
-        <p>확정된 방향으로 본 제작에 들어가 AI와 전문가의 협업으로 완성합니다.</p>
+        <h3 data-ko="제작 & 편집" data-en="Production & Editing">제작 & 편집</h3>
+        <p data-ko="확정된 방향으로 본 제작에 들어가 AI와 전문가의 협업으로 완성합니다." data-en="We move into full production, combining AI and expert collaboration to deliver.">확정된 방향으로 본 제작에 들어가 AI와 전문가의 협업으로 완성합니다.</p>
       </div>
       <div class="process-step">
         <div class="process-number">04</div>
-        <h3>납품 & 피드백</h3>
-        <p>최종 결과물을 납품하고, 수정 요청을 빠르게 반영합니다.</p>
+        <h3 data-ko="납품 & 피드백" data-en="Delivery & Feedback">납품 & 피드백</h3>
+        <p data-ko="최종 결과물을 납품하고, 수정 요청을 빠르게 반영합니다." data-en="We deliver the final product and quickly address any revision requests.">최종 결과물을 납품하고, 수정 요청을 빠르게 반영합니다.</p>
       </div>
     </div>
   </section>
@@ -626,36 +659,36 @@
   <section id="portfolio">
     <div class="section-header">
       <p class="section-label">Portfolio</p>
-      <h2 class="section-title">최근 프로젝트</h2>
-      <p class="section-desc">마테오 AI 스튜디오가 만들어낸 영상 작업물을 확인해보세요.</p>
+      <h2 class="section-title" data-ko="최근 프로젝트" data-en="Recent Projects">최근 프로젝트</h2>
+      <p class="section-desc" data-ko="마테오 AI 스튜디오가 만들어낸 영상 작업물을 확인해보세요." data-en="Explore the video projects crafted by Mateo AI Studio.">마테오 AI 스튜디오가 만들어낸 영상 작업물을 확인해보세요.</p>
     </div>
     <div class="portfolio-grid">
       <div class="portfolio-card">
         <div class="portfolio-thumbnail">🎥</div>
         <div class="portfolio-overlay">
-          <h3>테크 스타트업 브랜드 필름</h3>
-          <span>AI 광고 영상</span>
+          <h3 data-ko="테크 스타트업 브랜드 필름" data-en="Tech Startup Brand Film">테크 스타트업 브랜드 필름</h3>
+          <span data-ko="AI 광고 영상" data-en="AI Commercial">AI 광고 영상</span>
         </div>
       </div>
       <div class="portfolio-card">
         <div class="portfolio-thumbnail">🎞️</div>
         <div class="portfolio-overlay">
-          <h3>뷰티 브랜드 캠페인</h3>
-          <span>소셜미디어 콘텐츠</span>
+          <h3 data-ko="뷰티 브랜드 캠페인" data-en="Beauty Brand Campaign">뷰티 브랜드 캠페인</h3>
+          <span data-ko="소셜미디어 콘텐츠" data-en="Social Media Content">소셜미디어 콘텐츠</span>
         </div>
       </div>
       <div class="portfolio-card">
         <div class="portfolio-thumbnail">🎬</div>
         <div class="portfolio-overlay">
-          <h3>인디 아티스트 뮤직비디오</h3>
-          <span>뮤직비디오</span>
+          <h3 data-ko="인디 아티스트 뮤직비디오" data-en="Indie Artist Music Video">인디 아티스트 뮤직비디오</h3>
+          <span data-ko="뮤직비디오" data-en="Music Video">뮤직비디오</span>
         </div>
       </div>
       <div class="portfolio-card">
         <div class="portfolio-thumbnail">🏙️</div>
         <div class="portfolio-overlay">
-          <h3>글로벌 기업 IR 영상</h3>
-          <span>기업 홍보영상</span>
+          <h3 data-ko="글로벌 기업 IR 영상" data-en="Global Corporate IR Video">글로벌 기업 IR 영상</h3>
+          <span data-ko="기업 홍보영상" data-en="Corporate Video">기업 홍보영상</span>
         </div>
       </div>
     </div>
@@ -667,19 +700,19 @@
       <div class="stats-grid">
         <div class="stat-item">
           <h3>150+</h3>
-          <p>완성된 프로젝트</p>
+          <p data-ko="완성된 프로젝트" data-en="Projects Completed">완성된 프로젝트</p>
         </div>
         <div class="stat-item">
-          <h3>3배</h3>
-          <p>기존 대비 제작 속도</p>
+          <h3 data-ko="3배" data-en="3x">3배</h3>
+          <p data-ko="기존 대비 제작 속도" data-en="Faster Production Speed">기존 대비 제작 속도</p>
         </div>
         <div class="stat-item">
           <h3>98%</h3>
-          <p>클라이언트 만족도</p>
+          <p data-ko="클라이언트 만족도" data-en="Client Satisfaction">클라이언트 만족도</p>
         </div>
         <div class="stat-item">
           <h3>50+</h3>
-          <p>파트너 브랜드</p>
+          <p data-ko="파트너 브랜드" data-en="Partner Brands">파트너 브랜드</p>
         </div>
       </div>
     </div>
@@ -689,15 +722,15 @@
   <section id="contact">
     <div class="contact-wrapper">
       <div class="contact-info">
-        <h2>프로젝트를<br>시작해볼까요?</h2>
-        <p>아이디어만 있어도 괜찮습니다.<br>마테오 AI 스튜디오가 함께 만들어갑니다.</p>
+        <h2 data-ko="프로젝트를<br>시작해볼까요?" data-en="Ready to Start<br>Your Project?">프로젝트를<br>시작해볼까요?</h2>
+        <p data-ko="아이디어만 있어도 괜찮습니다.<br>마테오 AI 스튜디오가 함께 만들어갑니다." data-en="Even just an idea is enough.<br>Mateo AI Studio will build it with you.">아이디어만 있어도 괜찮습니다.<br>마테오 AI 스튜디오가 함께 만들어갑니다.</p>
         <div class="contact-detail">
           <span>📧</span>
           <span>group@mateoaistudio.com</span>
         </div>
         <div class="contact-detail">
           <span>📍</span>
-          <span>서울시 강남구 논현로104길 10</span>
+          <span data-ko="서울시 강남구 논현로104길 10" data-en="10, Nonhyeon-ro 104-gil, Gangnam-gu, Seoul">서울시 강남구 논현로104길 10</span>
         </div>
         <div class="contact-detail">
           <span><i class="fa-brands fa-instagram"></i></span>
@@ -708,20 +741,57 @@
           <a href="https://www.youtube.com/@mateoaistudio" target="_blank" style="color: var(--text-secondary); text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='var(--primary-light)'" onmouseout="this.style.color='var(--text-secondary)'">YouTube</a>
         </div>
       </div>
-      <form class="contact-form" onsubmit="event.preventDefault(); alert('문의가 접수되었습니다. 빠르게 연락드리겠습니다!');">
-        <input type="text" placeholder="이름 / 회사명" required>
-        <input type="email" placeholder="이메일" required>
-        <input type="text" placeholder="프로젝트 유형 (예: 광고 영상, 홍보영상)">
-        <textarea placeholder="프로젝트에 대해 간단히 알려주세요"></textarea>
-        <button type="submit" class="btn-primary" style="border: none; font-family: inherit; font-size: 1rem;">문의 보내기</button>
+      <form class="contact-form" id="contactForm">
+        <input type="text" data-placeholder-ko="이름 / 회사명" data-placeholder-en="Name / Company" placeholder="이름 / 회사명" required>
+        <input type="email" data-placeholder-ko="이메일" data-placeholder-en="Email" placeholder="이메일" required>
+        <input type="text" data-placeholder-ko="프로젝트 유형 (예: 광고 영상, 홍보영상)" data-placeholder-en="Project Type (e.g., Commercial, Corporate Video)" placeholder="프로젝트 유형 (예: 광고 영상, 홍보영상)">
+        <textarea data-placeholder-ko="프로젝트에 대해 간단히 알려주세요" data-placeholder-en="Tell us briefly about your project" placeholder="프로젝트에 대해 간단히 알려주세요"></textarea>
+        <button type="submit" class="btn-primary" style="border: none; font-family: inherit; font-size: 1rem;" data-ko="문의 보내기" data-en="Send Inquiry">문의 보내기</button>
       </form>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2026 마테오 AI 스튜디오. All rights reserved.</p>
+    <p data-ko="&copy; 2026 마테오 AI 스튜디오. All rights reserved." data-en="&copy; 2026 Mateo AI Studio. All rights reserved.">&copy; 2026 마테오 AI 스튜디오. All rights reserved.</p>
   </footer>
+
+  <script>
+    let currentLang = 'ko';
+
+    function setLang(lang) {
+      currentLang = lang;
+      document.documentElement.lang = lang;
+
+      // Update lang toggle buttons
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.trim() === (lang === 'ko' ? 'KR' : 'EN'));
+      });
+
+      // Update all elements with data-ko/data-en attributes
+      document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+        el.innerHTML = el.getAttribute('data-' + lang);
+      });
+
+      // Update placeholders
+      document.querySelectorAll('[data-placeholder-' + lang + ']').forEach(el => {
+        el.placeholder = el.getAttribute('data-placeholder-' + lang);
+      });
+
+      // Update page title
+      document.title = lang === 'ko'
+        ? '마테오 AI 스튜디오 | AI 전문 영상 제작사'
+        : 'Mateo AI Studio | AI Video Production';
+    }
+
+    // Contact form submit
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert(currentLang === 'ko'
+        ? '문의가 접수되었습니다. 빠르게 연락드리겠습니다!'
+        : 'Your inquiry has been submitted. We will contact you shortly!');
+    });
+  </script>
 
 </body>
 </html>
